@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'products', # Se tienen que añadir el nombre de la app creada antes de realizar las migraciones e inclusion a la base de datos
 ]
 
 MIDDLEWARE = [
