@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Coffee Shop{% endblock %}</title>
+    {% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> {% endcomment %}
+    {% comment %} <link rel="stylesheet" href="{% static 'css/style.css' %}"> {% endcomment %}
+</head>
+<body>
+{% comment %}     <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href="{% url 'products:list' %}">Productos</a></li>
+                <li><a href="{% url 'products:create' %}">Crear producto</a></li>
+            </ul>
+        </nav>
+    </header> {% endcomment %}
+    <main>
+        {% comment %} Se añade el bloque para añadir el contenido {% endcomment %}
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p> &copy; 2021 Coffee Shop </p>
+    </footer>

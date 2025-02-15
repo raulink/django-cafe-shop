@@ -1,0 +1,16 @@
+{% extends "base.html"%}
+{% comment %} {% block title %} Lista de productos {% endblock %} {% endcomment %}
+{% block content %}
+<h1> Lista de productos </h1>
+<ul>
+    {% for product in products %}
+        <li> {{ product.name }} 
+            <p> {{ product.price }}  Bs </p>
+            {% if product.photo %}
+                <img src="{{ product.photo.url }}" alt="{{ product.name }}" width="100" style="max-height: 100px;">                
+            {% endif %}
+        </li>
+            
+    {% endfor %}
+</ul>
+{% endblock %}

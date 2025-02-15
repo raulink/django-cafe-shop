@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -55,8 +56,11 @@ ROOT_URLCONF = 'cofee_shop.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'), # Se tiene que añadir la carpeta templates en el proyecto para que se puedan renderizar los templates
+            
+        ],
+        'APP_DIRS': True,   # Se va a ir a buscar los templates en las carpetas de las aplicaciones
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
