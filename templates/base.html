@@ -17,15 +17,19 @@
     {% comment %} <link rel="stylesheet" href="{% static 'css/style.css' %}"> {% endcomment %}
 </head>
 <body>
-{% comment %}     <header>
-        <nav>
-            <ul>
-                <li><a href="{% url 'home' %}">Inicio</a></li>
-                <li><a href="{% url 'products:list' %}">Productos</a></li>
-                <li><a href="{% url 'products:create' %}">Crear producto</a></li>
-            </ul>
-        </nav>
-    </header> {% endcomment %}
+    
+    
+
+
+    {% if user.is_authenticated %}
+        Hola usuario autenticado: {{ user.username }}
+        {% comment %} <a href="{% url 'logout' %}">Logout</a> {% endcomment %}
+    {% else %}
+        <a href="{% url 'login' %}">Login</a>
+        {% comment %} <a href="{% url 'register' %}">Register</a> {% endcomment %}
+    {% endif %}
+
+
     <main>
         {% comment %} Se añade el bloque para añadir el contenido {% endcomment %}
         {% block content %}

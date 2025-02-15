@@ -38,7 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+# Aplicaciones de terceros
+    'crispy_forms', # Se tiene que añadir el nombre de la app creada antes de realizar las migraciones e inclusion a la base de datos
+    'crispy_tailwind', # Se tiene que añadir el nombre de la app creada antes de realizar las migraciones e inclusion a la base de datos    
+# Aplicaciones creadas
     'products', # Se tienen que añadir el nombre de la app creada antes de realizar las migraciones e inclusion a la base de datos
+    'users', 
 ]
 
 MIDDLEWARE = [
@@ -126,3 +131,13 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# PARA TRABAJAR CON CRISPY TAILWIND
+CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
+
+CRISPY_TEMPLATE_PACK = "tailwind"
+
+
+# DONDE SE ENVIARA AL USUARIO DESPUES DE HACER LOGIN
+LOGIN_REDIRECT_URL = 'list_product'
+
