@@ -18,7 +18,6 @@ Including another URLconf
 from django.urls import path
 
 from .views import ProductFormView, ProductListView
-
 urlpatterns = [
     path('', ProductListView.as_view(), name='list_product'), #referenciar con el nombre para utilizar en el view
     path('agregar/', ProductFormView.as_view(), name='add_product'), #referenciar con el nombre para utilizar en el view
