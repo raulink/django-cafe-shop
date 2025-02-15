@@ -113,7 +113,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-bo' # Cambio de idioma
 
 TIME_ZONE = 'UTC'
 
@@ -140,4 +140,4 @@ CRISPY_TEMPLATE_PACK = "tailwind"
 
 # DONDE SE ENVIARA AL USUARIO DESPUES DE HACER LOGIN
 LOGIN_REDIRECT_URL = 'list_product'
-
+LOGOUT_REDIRECT_URL = 'list_product'
