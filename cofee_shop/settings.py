@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 # Aplicaciones creadas
     'products', # Se tienen que añadir el nombre de la app creada antes de realizar las migraciones e inclusion a la base de datos
     'users', 
+    'orders', # Se tienen que añadir el nombre de la app creada antes de realizar las migraciones e inclusion a la base de datos
 ]
 
 MIDDLEWARE = [

@@ -21,9 +21,11 @@ from django.conf import settings    #para que se pueda ver las imagenes en el pa
 from django.conf.urls.static import static  #para que se pueda ver las imagenes en el panel de administración
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin', admin.site.urls),
     path('productos/', include('products.urls')),
     path('usuarios/', include('users.urls')), # Se tiene que añadir el nombre de la app creada antes de realizar las migraciones e inclusion a la base de datos
+    path('ordenes/', include('orders.urls')), # Se tiene que añadir el nombre de la app creada antes de realizar las migraciones e inclusion a la base de datos
+    
     
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) #para que se pueda ver las imagenes en el panel de administración
 

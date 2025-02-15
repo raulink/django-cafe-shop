@@ -18,9 +18,6 @@
 </head>
 <body>
     
-    
-
-
     {% if user.is_authenticated %}
         Hola usuario autenticado: {{ user.username }}
         {% comment %} <a href="{% url 'logout' %}">Logout</a> {% endcomment %}
