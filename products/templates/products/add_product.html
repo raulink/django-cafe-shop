@@ -1,14 +1,7 @@
-Aca aparecera el Formulario
+Acá aparecerá el form
 
-{% comment %} Crear etiqueta form {% endcomment %}
-<form action="{% url "add_product" %}" method="post">    
-    {% comment %} Se requiere añadir el tag para el token {% endcomment %}
-    {% csrf_token %}  
+<form action="{% url "add_product" %}" method='post'>
+    {% csrf_token %}
     {{form.as_p}}
-    {% comment %} Se añade el formulario {% endcomment %}    
     <button type="submit">Agregar</button>
-
 </form>
-
-
-
